@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
     id("kotlin-parcelize")
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
-    id("com.google.devtools.ksp")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -57,34 +58,25 @@ dependencies {
     implementation ("androidx.navigation:navigation-fragment-ktx:2.5.2")
     implementation ("androidx.navigation:navigation-ui-ktx:2.5.2")
 
-    //loading button
-    implementation ("br.com.simplepass:loading-button-android:2.2.0")
-
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.13.0")
 
     //circular image
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    //viewpager2 indicatior
-    implementation ("io.github.vejei.viewpagerindicator:viewpagerindicator:1.0.0-alpha.1")
-
-    //stepView
-    implementation ("com.shuhart.stepview:stepview:1.5.1")
-
     //Android Ktx
-    implementation ("androidx.navigation:navigation-fragment-ktx:2.4.2")
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.8.2")
 
     //Dagger hilt
-    implementation ("com.google.dagger:hilt-android:2.38.1")
-    ksp ("com.google.dagger:hilt-compiler:2.38.1")
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt.android)
+    implementation (libs.androidx.hilt.navigation.compose)
+    implementation (libs.androidx.hilt.navigation.compose.v100alpha01)
 
     //Firebase
-    implementation ("com.google.firebase:firebase-auth:21.0.6")
+    implementation ("com.google.firebase:firebase-auth:23.0.0")
 
     //Coroutines with firebase
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1")
-
-
 
 }
