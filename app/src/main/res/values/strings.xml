@@ -49,4 +49,9 @@
     <string name="no_account">Don\'t have an account? Register</string>
     <string name="register">Let\'s Register</string>
     <string name="already_account">Do you have an account? Log in</string>
+    <string name="reset_password">Reset password</string>
+    <string name="text_send">We will send you the password reset link to your email</string>
+    <string name="start">Start</string>
+    <string name="cancel">Cancel</string>
+    <string name="send">Send</string>
 </resources>
