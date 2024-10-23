@@ -66,6 +66,7 @@ dependencies {
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
     //Android Ktx
+    implementation ("androidx.navigation:navigation-ui-ktx:2.8.3")
     implementation ("androidx.navigation:navigation-fragment-ktx:2.8.2")
 
     //Dagger hilt
